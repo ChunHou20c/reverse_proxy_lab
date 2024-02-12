@@ -4,6 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "reverse_proxy"
+path = "src/reverse_proxy.rs"
+
+[[bin]]
+name = "hello_service"
+path = "src/hello_service.rs"
 
 [dependencies]
 http-body-util = "0.1.0"
