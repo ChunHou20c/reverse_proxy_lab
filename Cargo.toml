@@ -7,12 +7,14 @@ edition = "2021"
 [[bin]]
 name = "reverse_proxy"
 path = "src/reverse_proxy.rs"
-rustflags = ["-C", "target-feature=+crt-static"]
 
 [[bin]]
 name = "hello_service"
 path = "src/hello_service.rs"
-rustflags = ["-C", "target-feature=+crt-static"]
+
+[[bin]]
+name = "auth_service"
+path = "src/auth_service.rs"
 
 [dependencies]
 http-body-util = "0.1.0"
