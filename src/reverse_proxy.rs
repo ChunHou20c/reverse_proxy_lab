@@ -26,6 +26,8 @@ async fn proxy_handler(mut req: Request<hyper::body::Incoming>) ->  Result<Respo
     .map(|x| x.as_str())
     .unwrap_or("/"));
 
+    println!("{:?}", req.uri().path_and_query());
+
     let uri = uri_string.parse().unwrap();
     *req.uri_mut() = uri;
 
